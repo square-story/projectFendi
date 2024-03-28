@@ -24,7 +24,10 @@
         transform: translateX(-50%);
     }
     .text-overley .video-head h1{
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+    #video-text-header{
+        font-size: 1rem;
     }
     .button-hover a{
         padding: 0.5rem 2rem;
