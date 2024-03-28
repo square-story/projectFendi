@@ -1,0 +1,332 @@
+@font-face {
+  font-family: Founders-Grotesk;
+  src: url(fonts/founders-grotesk-web-regular.woff2);
+}
+@font-face {
+  font-family: OggText-book;
+  src: url(fonts/OggText-Book.woff2);
+}
+:root {
+  --transition: all 0.5s ease-in;
+  --primary-footer: rgb(246, 246, 246);
+  --text-color: #000000;
+  --font-base: Founders-Grotesk, sans-serif;
+  --font-seprate: OggText-book, sans-serif;
+  --font-size-container: 1rem;
+  --breadcrumbs-menu-height: 64px;
+  --global-top-gap: 63px;
+  --header-top-gap: 63px;
+  --background-gradient: linear-gradient(180deg, rgba(0,0,0,0) 1%, rgba(0,0,0,0.20) 100%);
+  --text-align: left;
+  --horizontal-align-mobile: center;
+  --text-align-mobile: center;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-base);
+  line-height:1.5;
+  color: var(--text-color);
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ margin-top:0;
+ margin-bottom:.71429rem
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+li{
+    list-style: none;
+}
+/* img{
+    max-width: 100%;
+    height: auto;
+} */
+/*section decration before the html start-up*/
+header{
+  height: 62px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+
+.menu-content{
+  position: absolute;
+  margin: 10px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.menu-content:hover{
+  visibility: 80%;
+}
+.main-logo img{
+  cursor: pointer;
+  position: absolute;
+  margin: 15px;
+  max-width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wish-list{
+  position: absolute;
+  margin: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.items-heads{
+  font-size: 24px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.items-heads span{
+  visibility: hidden;
+  
+}
+.arrow-head{
+  transition: var(--transition);
+}
+.arrow-head:hover span{
+  visibility: visible;
+}
+.items-heads:hover{
+  opacity: 80%;
+  
+}
+.items-heads-down{
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-color);
+}
+.items-heads-down:hover{
+  opacity: 80%;
+}
+.offcanvas{
+  transition: var(--transition);
+}
+
+.images-container{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+/* image container */
+.images-container img{
+  height: 100%;
+  width: 100%;
+  margin-top: 62px;
+  object-fit: cover;
+  object-position:top;
+
+}
+.image1{
+  position: relative;
+}
+.image1 .image-container-text{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+}
+.image1 .image-container-text h1{
+  font-family: var(--font-seprate);
+  font-size: 4rem;
+}
+.image2 {
+  position: relative;
+}
+.image2 .image-container-text{
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+}
+.image2 .image-container-text h1{
+  font-family: var(--font-seprate);
+  font-size: 4rem;
+}
+.video-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.video-back{
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.text-overley{
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  text-align: left;
+  color: white;
+  transform: translateX(-50%);
+}
+.text-overley .video-head h1{
+  font-family: var(--font-seprate);
+  font-size: 4rem;
+}
+.button-hover a{
+  color: white;
+  border: solid rgb(255, 255, 255) 1px;
+  padding:0.5rem 8rem;
+  border-radius: 15px;
+  transition: var(--transition);
+}
+.button-hover a:hover{
+  color: #000000;
+  border: #000000 0.5px solid;
+  background-color: white;
+}
+/* .carousel-multi-item .slide .carousel-item {
+  -webkit-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+} */
+.card-wrapper{
+  display: flex;
+}
+.card{
+  margin: 0 .5em;
+}
+#carouselExampleAutoplaying{
+  height: 60vh;
+
+}
+.image-container-carosel{
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+  object-position:top;
+}
+.button-hover a{
+  margin-left: 10px;
+}
+.image-container-only{
+  position: relative;
+  width: 100%;
+  height: 85vh;
+}
+.gallery{
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+  object-position: top;
+  object-fit: cover;
+
+}
+footer{
+  position: relative;
+  width: 100%;
+  /* height: 85vh; */
+  background-color: #f6f6f6;
+}
+.form-content{
+  width: 100%;
+  background-color: var(--primary-footer);
+  border-top: #000000 2px solid;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+  padding: 30px 20px;
+}
+.form-content .btn{
+  font-family: var(--font-base);
+  text-align:center;
+  padding: 1.07143rem 1.78571rem;
+  color: #000000;
+  border-color: #000;
+  border-radius: 0px;
+  transition: var(--transition);
+}
+.form-content .btn:hover{
+  background-color: #000;
+  color: white;
+  border-color: white;
+}
+.form-group{
+  border-radius: 0;
+  border-color: #000;
+  display: flex;
+  
+}
+.form-control{
+  border-style: solid;
+  border-radius: 0;
+  border-color: #000;
+  outline: none;
+  padding: 0.85714rem 1.78571rem;
+  background-color: white;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+  font-size: 1.14286rem;
+}
+.form-group button{
+  padding: 0.45714rem 1.78571rem;
+  background-color: white;
+  transition: var(--transition);
+  border-style: solid;
+  border: 1px black solid;
+}
+.form-group button:hover{
+  background-color: #000;
+  color: white;
+  border-style: solid;
+  border-color: #000;
+
+}
+.btn-group button{
+  background-color: white;
+
+}
+
+.footer-details1{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+.footer-details1 h4{
+  font-family: var(--font-seprate);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.footer-details1 ul{
+  padding-left: 0;
+  padding-top: 1rem;
+}
+.footer-details1 ul li{
+  cursor: pointer;
+  padding-top: 1rem;
+  transition: var(--transition);
+}
+.footer-details1 ul li:hover{
+  text-decoration: underline;
+}

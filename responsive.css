@@ -1,0 +1,52 @@
+@media screen and (max-width:1024px) {
+ 
+    .btn span{
+      display: none;
+    }
+    .main-logo img{
+        max-width: 80px;
+    }
+    .images-container{
+        grid-template-columns: auto;
+        
+    }
+    .image1 .image-container-text h1,.image2 .image-container-text h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .video-container{
+        object-fit: cover;
+
+    }
+    .text-overley{
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .text-overley .video-head h1{
+        font-size: 3rem;
+    }
+    .button-hover a{
+        padding: 0.5rem 2rem;
+    }
+    .form-content-1{
+        grid-area: span;
+    }
+  
+    
+}
+@media all and (max-width: 768px) {
+    .card-body .card-text{
+            display: none;
+    }
+    .button-hover a{
+        padding: 0 1rem;
+    }
+
+    
+  
+    @media all and (max-width: 480px) {
+      
+    }
+  }
+  
