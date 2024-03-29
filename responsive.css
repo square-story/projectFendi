@@ -49,7 +49,12 @@
     
   
     @media all and (max-width: 480px) {
-      
+        .card-body .card-text{
+            display: none;
+    }
+    .button-hover a{
+        padding: 0 0.5rem;
+    }
     }
   }
   
